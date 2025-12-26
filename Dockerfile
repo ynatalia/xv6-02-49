@@ -13,7 +13,7 @@ RUN apt-get -qq update && \
                     
     &&git clone https://github.com/mit-pdos/xv6-public.git  xv6 \
     &&chmod +x xv6/*.pl \
-#    &&chmod +x xv6-02-49/*.pl \
+    &&chmod +x xv6-02-49/*.pl \
 ####
 #    5 lines for general cleanning, -15% in size  
     &&apt-get purge -qq git \
@@ -23,7 +23,7 @@ RUN apt-get -qq update && \
     &&rm -rf /usr/share/man/* /usr/share/doc/*
 
 WORKDIR /xv6
-#WORKDIR /xv6-02-49
+WORKDIR /xv6-02-49
 
 CMD ["/bin/bash"]
 
